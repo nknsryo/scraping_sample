@@ -7,6 +7,8 @@ name = "pypi"
 requests = "*"
 selenium = "*"
 chromedriver-binary-auto = "*"
+beautifulsoup4 = "*"
+lxml = "*"
 
 [dev-packages]
 
