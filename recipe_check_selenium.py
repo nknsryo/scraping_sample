@@ -42,6 +42,7 @@ def get_recipes(driver):
             "url": recipe_url})
     return recipes
 
+
 def main():
     food = 'トマト'
 
@@ -59,5 +60,8 @@ def main():
         for recipe in recipes:
             print(f"レシピ名 {recipe['title']} , URL:{recipe['url']}")
 
+
 if __name__ == '__main__':
+    start = time.time()  # 開始の時間
     main()
+    print(time.time() - start)  # 終了の時間 -開始の時間

@@ -1,3 +1,6 @@
+# noinspection PyUnresolvedReferences
+import time
+
 import requests as requests
 
 import bs4
@@ -10,7 +13,7 @@ def search_recipes(base_url, food):
 
 
 def get_recipes(base_url, html):
-    soup = bs4.BeautifulSoup(html, 'lxml')
+    soup = bs4.BeautifulSoup(html, 'lxml')  # pythonで使いやすいようにするもの
     recipe_previews = soup.find_all(class_="recipe-preview")
 
     recipes = []
@@ -36,4 +39,6 @@ def main():
 
 
 if __name__ == '__main__':
+    start = time.time()  # 開始の時間
     main()
+    print(time.time() - start)  # 終了の時間 -開始の時間
